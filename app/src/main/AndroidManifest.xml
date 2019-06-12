@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.entity.Supervisor"></activity>
+        <activity android:name=".OutActivity"></activity>
+        <activity android:name="com.example.entity.Supervisor" />
         <activity android:name="com.example.entity.Message" />
         <activity android:name=".DormActivity" />
         <activity android:name=".StudentActivity" />
