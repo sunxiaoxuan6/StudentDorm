@@ -9,20 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OutActivity"></activity>
-        <activity android:name="com.example.entity.Supervisor" />
-        <activity android:name="com.example.entity.Message" />
-        <activity android:name=".DormActivity" />
-        <activity android:name=".StudentActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.ui.OutActivity"></activity>
+        <activity android:name="com.example.ui.SupervisorActivity" />
+        <activity android:name="com.example.ui.AllocationActivity" />
+        <activity android:name="com.example.ui.MessageActivity" />
+        <activity android:name="com.example.ui.DormActivity" />
+        <activity android:name="com.example.ui.StudentActivity" />
+        <activity android:name="com.example.ui.EnteringActivity"/>
+        <activity android:name="com.example.ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SupervisorActivity" />
-        <activity android:name=".MessageActivity" />
     </application>
 
 </manifest>
