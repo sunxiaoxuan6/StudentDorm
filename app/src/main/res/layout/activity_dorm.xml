@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ui.DormActivity"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/title_toolbar"
+        android:background="?attr/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/dorm"
+            android:textSize="30sp"/>
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </android.support.v4.view.ViewPager>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/luru"
+            android:text="录入信息"
+            android:drawableTop="@drawable/tab_menu_luru"
+            style="@style/tab_menu_item"/>
+        <RadioButton
+            android:checked="false"
+            android:id="@+id/fenpei"
+            android:text="分配宿舍"
+            android:drawableTop="@drawable/tab_menu_fenpei"
+            style="@style/tab_menu_item"/>
+        <RadioButton
+            android:id="@+id/diaohuan"
+            style="@style/tab_menu_item"
+            android:checked="false"
+            android:drawableTop="@drawable/tab_menu_diaohuan"
+            android:text="调换宿舍" />
+        <RadioButton
+            android:checked="false"
+            android:id="@+id/shenhe"
+            android:text="退宿审核"
+            android:drawableTop="@drawable/tab_menu_shenhe"
+            style="@style/tab_menu_item"/>
+        <RadioButton
+            android:checked="false"
+            android:id="@+id/jiehuan"
+            android:text="信息查询"
+            android:drawableTop="@drawable/tab_menu_chaxun"
+            style="@style/tab_menu_item"/>
+    </RadioGroup>
+</LinearLayout>

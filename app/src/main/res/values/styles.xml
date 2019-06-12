@@ -1,0 +1,53 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--菜单项的字体颜色-->
+        <item name="android:itemTextAppearance">@style/MenuItemTextStyle</item>
+        <!--选项菜单弹出框的样式-->
+        <item name="actionOverflowMenuStyle">@style/PopupTheme</item>
+    </style>
+    <style name="tab_menu_item">
+        <item name="android:button">@null</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/tab_menu_text</item>
+    </style>
+
+    <!--OptionMenu菜单的字体颜色，设置android：itemTextAppearance属性必须放到AppTheme才起作用-->
+    <style name="MenuItemTextStyle" parent="android:style/TextAppearance.Widget.IconMenu.Item">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--设置弹出菜单的锚点-->
+    <style name="OverflowMenuStyle" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="overlapAnchor">false</item>
+    </style>
+
+    <!--设置菜单弹框的主题-->
+    <style name="PopupTheme" parent="Theme.AppCompat.DayNight">
+        <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
+        <item name="android:actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
+        <item name="android:popupBackground">@android:color/black</item><!--设置弹框的背景色-->
+    </style>
+    <!--设置toolbar样式-->
+    <style name="NoActionBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--修改toolbar图标的颜色-->
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="actionOverflowMenuStyle">@style/PopupTheme</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+    </style>
+</resources>

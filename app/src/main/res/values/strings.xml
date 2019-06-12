@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">宿舍管理系统</string>
+    <string name="student">学生管理界面</string>
+    <string name="dorm">宿舍管理员界面</string>
+</resources>
