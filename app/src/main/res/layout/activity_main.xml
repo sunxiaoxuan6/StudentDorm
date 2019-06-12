@@ -98,22 +98,22 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:textSize="20sp"
-            android:layout_marginLeft="30dp"
             android:text="登录"/>
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:textSize="20sp"
-            android:layout_marginLeft="30dp"
             android:text="修改密码"/>
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:textSize="20sp"
-            android:layout_marginLeft="30dp"
             android:text="忘记密码"/>
     </LinearLayout>
 </LinearLayout>
