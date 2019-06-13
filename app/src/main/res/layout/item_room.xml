@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/room_name"
+        android:gravity="center"
+        android:text="宿舍名"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/room_expect"
+        android:gravity="center"
+        android:text="应住人数"
+        android:textSize="24sp"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/room_real"
+        android:gravity="center"
+        android:text="实住人数"
+        android:textSize="24sp"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/room_cost"
+        android:gravity="center"
+        android:text="住宿费"
+        android:textSize="24sp"/>
+
+</LinearLayout>
