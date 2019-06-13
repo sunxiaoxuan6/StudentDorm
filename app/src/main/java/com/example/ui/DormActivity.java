@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 
-public class DormActivity extends AppCompatActivity implements View.OnClickListener {
+public class DormActivity extends AppCompatActivity {
     private Button returns;
     private RadioButton stay;
     private RadioButton revise;
@@ -18,21 +18,12 @@ public class DormActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dorm);
+        init();
+    }
+
+    private void init() {
         returns = findViewById(R.id.returns);
 
-        returns.setOnClickListener(this);
-    }
-
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.returns:
-                returns();
-                break;
-        }
-    }
-
-    private void returns() {
         returns.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

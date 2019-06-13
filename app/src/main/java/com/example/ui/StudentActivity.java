@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class StudentActivity extends AppCompatActivity implements View.OnClickListener {
+public class StudentActivity extends AppCompatActivity {
     private Button returns;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,20 +14,6 @@ public class StudentActivity extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_student);
 
         returns = findViewById(R.id.returns);
-        returns.setOnClickListener(this);
-
-    }
-
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.returns:
-                returns();
-                break;
-        }
-    }
-
-    private void returns() {
         returns.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,5 +22,4 @@ public class StudentActivity extends AppCompatActivity implements View.OnClickLi
             }
         });
     }
-
 }
