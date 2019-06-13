@@ -1,11 +1,11 @@
-package com.example.studentdorm.util;
+package com.example.util;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBHelper extends SQLiteOpenHelper {
-    private final String TBL_ROOM = "create table t_room(" +
+    private final String TBL_ROOM = "create table room(" +
             "id int  primary key autoincrement not null," +
             "room_name varchar(20) not null," +
             "room_sex varchar(6) not null," +
@@ -41,7 +41,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("drop table if exists t_room");
+        db.execSQL("drop table if exists room");
         db.execSQL("drop table if exists keeper1");
         onCreate(db);
 
