@@ -23,13 +23,13 @@
         android:orientation="horizontal">
         <RadioButton
             android:checked="false"
-            android:id="@+id/chaxun"
+            android:id="@+id/manager"
             android:text="基本信息查询"
             android:drawableTop="@drawable/tab_menu_jibenxinxi"
             style="@style/tab_menu_item"/>
         <RadioButton
             android:checked="false"
-            android:id="@+id/luru"
+            android:id="@+id/enter"
             android:text="录入信息"
             android:drawableTop="@drawable/tab_menu_xiugai"
             style="@style/tab_menu_item"/>
@@ -42,13 +42,13 @@
         android:orientation="horizontal">
         <RadioButton
             android:checked="true"
-            android:id="@+id/tuisu"
+            android:id="@+id/apply"
             android:text="退宿申请"
             android:drawableTop="@drawable/tab_menu_jibenxinxi"
             style="@style/tab_menu_item"/>
         <RadioButton
             android:checked="false"
-            android:id="@+id/xiugai"
+            android:id="@+id/revise"
             android:text="修改信息"
             android:drawableTop="@drawable/tab_menu_xiugai"
             style="@style/tab_menu_item"/>

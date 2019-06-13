@@ -80,8 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:text="学生"
-                android:textSize="25dp"
-                android:checked="true"/>
+                android:textSize="25dp"/>
 
             <RadioButton
                 android:id="@+id/rb_houseparent"

@@ -8,7 +8,6 @@ import android.widget.Button;
 
 public class StudentActivity extends AppCompatActivity implements View.OnClickListener {
     private Button returns;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,4 +36,5 @@ public class StudentActivity extends AppCompatActivity implements View.OnClickLi
             }
         });
     }
+
 }
