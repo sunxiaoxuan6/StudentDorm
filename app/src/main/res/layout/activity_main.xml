@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@mipmap/beijing"
     android:orientation="vertical"
-    tools:context="com.example.ui.MainActivity">
+    tools:context="com.example.ui.com.example.studentdorm.activity.MainActivity">
 
     <TextView
         android:layout_width="match_parent"

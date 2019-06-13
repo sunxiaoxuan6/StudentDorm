@@ -18,7 +18,7 @@
         <activity android:name=".MessageActivity" />
         <activity android:name=".DormActivity" />
         <activity android:name=".StudentActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.studentdorm.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
