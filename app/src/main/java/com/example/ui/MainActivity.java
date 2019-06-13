@@ -8,9 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 
-import com.example.model.Student;
-
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
     private Button btn_entry;
     private Button btn_revise;
     private EditText et_username;
@@ -34,28 +32,26 @@ public class MainActivity extends AppCompatActivity{
         rb_student = findViewById(R.id.rb_student);
         rb_houseparent = findViewById(R.id.rb_houseparent);
 
-            //修改密码
-            btn_revise.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(MainActivity.this, RevisePassWordActivity.class);
+        //修改密码
+        btn_revise.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, RevisePasswordActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_entry.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (rb_houseparent.isChecked()) {
+                    Intent intent = new Intent(MainActivity.this, DormActivity.class);
+                    startActivity(intent);
+                } else if (rb_student.isChecked()) {
+                    Intent intent = new Intent(MainActivity.this, StudentActivity.class);
                     startActivity(intent);
                 }
-            });
-
-            btn_entry.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if(rb_houseparent.isChecked()){
-                        Intent intent = new Intent(MainActivity.this, DormActivity.class);
-                            startActivity(intent);
-                    }else if(rb_student.isChecked()){
-                        Intent intent = new Intent(MainActivity.this, StudentActivity.class);
-                        startActivity(intent);
-                    }
-                }
-            });
-
-
+            }
+        });
     }
 }

@@ -3,11 +3,11 @@ package com.example.ui;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class RevisePassWordActivity extends AppCompatActivity {
+public class RevisePasswordActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_revise_pass_word);
+        setContentView(R.layout.activity_revise_password);
     }
 }

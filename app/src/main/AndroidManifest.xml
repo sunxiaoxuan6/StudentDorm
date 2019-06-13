@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StayActivity"></activity>
-        <activity android:name=".RevisePassWordActivity" />
+        <activity android:name=".RevisePasswordActivity"></activity>
+        <activity android:name=".StayActivity" />
         <activity android:name=".RoomActivity" />
         <activity android:name=".AllocationsActivity" />
         <activity android:name=".ExchangeActivity" />
