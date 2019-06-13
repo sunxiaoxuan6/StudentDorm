@@ -18,11 +18,7 @@ public class DormActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dorm);
-        init();
-    }
-
-    private void init() {
-        returns = findViewById(R.id.returns);
+        returns = findViewById(R.id.return1);
 
         returns.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,4 +28,4 @@ public class DormActivity extends AppCompatActivity {
             }
         });
     }
-}
+    }
