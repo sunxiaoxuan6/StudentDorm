@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        btn_entry = findViewById(R.id.btn_entry);
+
         init();
     }
     private void init() {
@@ -45,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             rb_houseparent.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                   i=0;
+                   i=1;
                 }
             });
             //学生界面登录
