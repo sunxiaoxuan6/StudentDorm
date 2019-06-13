@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     private void entry() {
        int flagStudent=rb_student.isChecked()?0:1;
-       int flagDorm=rb_houseparent.isChecked()?0:1;
        if(flagStudent==0){
            rb_student.setOnClickListener(new View.OnClickListener() {
                @Override
