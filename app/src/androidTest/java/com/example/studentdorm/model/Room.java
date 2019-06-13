@@ -11,6 +11,14 @@ public class Room implements Serializable {
    private int cost;
    private String remark;
 
+    public Room(String roomName, String roomSex, int expectNumber, int realNumber, int cost, String remark) {
+        this.roomName = roomName;
+        this.roomSex = roomSex;
+        this.expectNumber = expectNumber;
+        this.realNumber = realNumber;
+        this.cost = cost;
+        this.remark = remark;
+    }
 
     public int getId() {
         return id;
@@ -71,8 +79,7 @@ public class Room implements Serializable {
 
     @Override
     public String toString() {
-        return "Room{" +
-                "id=" + id +
+        return "Room{"+
                 ", roomName='" + roomName + '\'' +
                 ", rooomSex='" + roomSex + '\'' +
                 ", excepyNumber=" + expectNumber +
