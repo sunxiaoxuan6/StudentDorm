@@ -6,15 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class DormActivity extends AppCompatActivity implements View.OnClickListener {
+public class ReviseActivity extends AppCompatActivity implements View.OnClickListener {
     private Button returns;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dorm);
+        setContentView(R.layout.activity_revise);
         returns = findViewById(R.id.returns);
-
         returns.setOnClickListener(this);
     }
 
@@ -25,13 +24,14 @@ public class DormActivity extends AppCompatActivity implements View.OnClickListe
                 returns();
                 break;
         }
+
     }
 
     private void returns() {
         returns.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DormActivity.this,MainActivity.class);
+                Intent intent = new Intent(ReviseActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });

@@ -44,6 +44,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
     private void revise() {
+        btn_revise.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,ReviseActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
     private void entry() {

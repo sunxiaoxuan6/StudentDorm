@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RoomActivity"></activity>
+        <activity android:name=".ReviseActivity"></activity>
+        <activity android:name=".RoomActivity" />
         <activity android:name=".AllocationsActivity" />
         <activity android:name=".ExchangeActivity" />
         <activity android:name=".QueryActivity" />
@@ -19,7 +20,7 @@
         <activity android:name=".MessageActivity" />
         <activity android:name=".DormActivity" />
         <activity android:name=".StudentActivity" />
-        <activity android:name="com.example.ui.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
