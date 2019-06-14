@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 
-public class StudentActivity extends AppCompatActivity implements View.OnClickListener {
+public class StudentActivity extends AppCompatActivity{
     private Button returns;
     private RadioButton manager;
     private RadioButton enter;
@@ -24,11 +24,6 @@ public class StudentActivity extends AppCompatActivity implements View.OnClickLi
         apply = findViewById(R.id.apply);
         returns = findViewById(R.id.returns);
 
-        manager.setOnClickListener(this);
-        enter.setOnClickListener(this);
-        revise.setOnClickListener(this);
-        apply.setOnClickListener(this);
-
         returns.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,58 +31,29 @@ public class StudentActivity extends AppCompatActivity implements View.OnClickLi
                 startActivity(intent);
             }
         });
-    }
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.manager:
-                manager();
-                break;
-            case R.id.enter:
-                enter();
-                break;
-            case R.id.apply:
-                apply();
-                break;
-            case R.id.revise:
-                revise();
-                break;
-        }
-    }
-
-    private void revise() {
-        revise.setOnClickListener(new View.OnClickListener() {
+        manager.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(StudentActivity.this, MessageActivity.class);
                 startActivity(intent);
             }
         });
-    }
-
-    private void apply() {
         enter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StudentActivity.this, MessageActivity.class);
+                startActivity(intent);
+            }
+        });
+        apply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(StudentActivity.this, OutActivity.class);
                 startActivity(intent);
             }
         });
-    }
-
-    private void enter() {
-        enter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(StudentActivity.this, MessageActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
-
-    private void manager() {
-        manager.setOnClickListener(new View.OnClickListener() {
+        revise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(StudentActivity.this, MessageActivity.class);

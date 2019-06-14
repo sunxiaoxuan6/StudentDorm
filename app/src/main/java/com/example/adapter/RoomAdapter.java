@@ -65,6 +65,5 @@ public class RoomAdapter extends BaseAdapter {
         TextView tvExpectNumber;
         TextView tvRealNumber;
         TextView tvCost;
-
     }
 }

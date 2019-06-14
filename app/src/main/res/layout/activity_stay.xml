@@ -7,32 +7,38 @@
     tools:context="com.example.ui.StayActivity"
     android:orientation="vertical">
 <Button
+    android:id="@+id/entering"
     android:layout_marginTop="20sp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="录入信息"
     android:textSize="20sp"/>
     <Button
+        android:id="@+id/allocation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="分配宿舍"
         android:textSize="20sp"/>
     <Button
+        android:id="@+id/exchange"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="调换宿舍"
         android:textSize="20sp"/>
     <Button
+        android:id="@+id/examine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="毕业退宿审核"
         android:textSize="20sp"/>
     <Button
+        android:id="@+id/inquiry2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="查询"
         android:textSize="20sp"/>
     <Button
+        android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

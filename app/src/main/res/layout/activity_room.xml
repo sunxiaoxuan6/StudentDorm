@@ -19,7 +19,6 @@
             android:gravity="center"
             android:text="宿舍名"
             android:textSize="20sp"/>
-
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -42,13 +41,14 @@
             android:text="住宿费"
             android:textSize="20sp"/>
     </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray"/>
     <ListView
+        android:id="@+id/list_room"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/list_room"></ListView>
+        android:layout_height="wrap_content"></ListView>
 
 </LinearLayout>

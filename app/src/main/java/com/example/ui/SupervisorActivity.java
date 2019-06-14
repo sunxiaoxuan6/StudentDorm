@@ -1,13 +1,36 @@
 package com.example.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 
 public class SupervisorActivity extends AppCompatActivity {
-
+private Button out;
+private Button keep;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_supervisor);
+        init();
+    }
+
+    private void init() {
+        out=findViewById(R.id.out);
+        out.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(SupervisorActivity.this,DormActivity.class);
+                startActivity(intent);
+            }
+        });
+        keep=findViewById(R.id.keep);
+        keep.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 }
