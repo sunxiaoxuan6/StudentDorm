@@ -1,6 +1,5 @@
 package com.example.adapter;
 
-import android.support.v4.widget.ViewDragHelper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +10,6 @@ import com.example.model.Room;
 import com.example.ui.R;
 
 import java.util.List;
-
-import javax.xml.transform.Templates;
 
 public class RoomAdapter extends BaseAdapter {
     private List<Room> rooms;

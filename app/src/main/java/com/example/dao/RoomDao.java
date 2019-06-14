@@ -9,7 +9,8 @@ import java.util.List;
         //查询所有的宿舍
         List<Room> selectAllRooms();
         //条件查询
-        Room select(Room roomName);
+        Room select(String roomName);
+
         List<Room> selectByCost(int cost);
         //增删改一个宿舍
         void insert(Room room);

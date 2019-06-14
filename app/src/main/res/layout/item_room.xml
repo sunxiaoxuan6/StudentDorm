@@ -28,13 +28,14 @@
         android:gravity="center"
         android:text="实住人数"
         android:textSize="24sp"/>
+
     <TextView
+        android:id="@+id/room_cost"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:id="@+id/room_cost"
         android:gravity="center"
         android:text="住宿费"
-        android:textSize="24sp"/>
+        android:textSize="24sp" />
 
 </LinearLayout>

@@ -8,18 +8,9 @@ import com.example.model.Room;
 
 import java.util.List;
 
-public class RoomService {
-    private Context context;
-    private RoomDao roomDao;
-
-    public RoomService(Context context) {
-        this.context = context;
-        roomDao=new RoomDAOImpl(context);
-    }
-    public List<Room> getAllRooms(){
-        return roomDao.selectAllRooms();
-    }
-    public void insert(Room room){
-        roomDao.insert(room);
-    }
+public interface RoomService {
+    public List<Room> getAllRooms();
+    public void insert(Room room);
+    public void modifyRealNumber(Room room);
+    public void delete(String roomName);
 }

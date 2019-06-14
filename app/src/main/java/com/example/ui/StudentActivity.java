@@ -32,6 +32,7 @@ public class StudentActivity extends AppCompatActivity{
             }
         });
 
+        //基本信息查询
         manager.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,6 +40,7 @@ public class StudentActivity extends AppCompatActivity{
                 startActivity(intent);
             }
         });
+        //录入信息
         enter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,6 +48,7 @@ public class StudentActivity extends AppCompatActivity{
                 startActivity(intent);
             }
         });
+        //退宿申请
         apply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,6 +56,7 @@ public class StudentActivity extends AppCompatActivity{
                 startActivity(intent);
             }
         });
+        //修改信息
         revise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

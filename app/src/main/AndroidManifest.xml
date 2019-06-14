@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ExamineActivity"></activity>
+        <activity android:name=".ADDRoomActivity"></activity>
+        <activity android:name=".ExamineActivity" />
         <activity android:name=".RevisePasswordActivity" />
         <activity android:name=".StayActivity" />
         <activity android:name=".RoomActivity" />

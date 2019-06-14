@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context="com.example.ui.StayActivity"
     android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="宿舍管理"
+        android:textSize="35dp"
+        android:layout_gravity="center"/>
 <Button
     android:id="@+id/entering"
     android:layout_marginTop="20sp"
@@ -30,6 +36,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="毕业退宿审核"
+        android:textSize="20sp"/>
+    <Button
+        android:id="@+id/add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="增加宿舍信息"
         android:textSize="20sp"/>
     <Button
         android:id="@+id/inquiry2"

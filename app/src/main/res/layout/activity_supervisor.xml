@@ -5,6 +5,12 @@
     android:layout_height="match_parent"
     tools:context="com.example.ui.SupervisorActivity"
     android:orientation="vertical">
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+      android:text="宿舍管理员信息"
+      android:textSize="35dp"
+      android:layout_gravity="center"/>
     <LinearLayout
         android:layout_marginTop="20sp"
         android:layout_width="match_parent"

@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class StayActivity extends AppCompatActivity {
-    private Button entering,allocation,exchange,examine,inquiry2,back;
+    private Button entering,allocation,exchange,examine,inquiry2,back,add;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,7 @@ public class StayActivity extends AppCompatActivity {
         examine=findViewById(R.id.examine);
         inquiry2=findViewById(R.id.inquiry2);
         back=findViewById(R.id.back);
+        add=findViewById(R.id.add);
 //录入信息
         entering.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +53,13 @@ public class StayActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(StayActivity.this,ExamineActivity.class);
+                startActivity(intent);
+            }
+        });
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(StayActivity.this,ADDRoomActivity.class);
                 startActivity(intent);
             }
         });
