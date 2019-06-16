@@ -11,6 +11,7 @@ import android.widget.RadioButton;
 public class MainActivity extends AppCompatActivity {
     private Button btn_entry;
     private Button btn_revise;
+    private Button btn_register;
     private EditText et_username;
     private EditText et_password;
     private RadioButton rb_student;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         btn_entry = findViewById(R.id.btn_entry);
         btn_revise = findViewById(R.id.btn_revise);
+        btn_register = findViewById(R.id.btn_register);
         et_username = findViewById(R.id.et_username);
         et_password = findViewById(R.id.et_password);
         rb_student = findViewById(R.id.rb_student);

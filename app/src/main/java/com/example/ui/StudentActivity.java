@@ -18,6 +18,8 @@ public class StudentActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student);
+
+
         manager = findViewById(R.id.manager);
         enter = findViewById(R.id.enter);
         revise = findViewById(R.id.revise);
@@ -29,6 +31,7 @@ public class StudentActivity extends AppCompatActivity{
             public void onClick(View v) {
                 Intent intent = new Intent(StudentActivity.this, MainActivity.class);
                 startActivity(intent);
+
             }
         });
 
