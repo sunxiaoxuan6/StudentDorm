@@ -24,12 +24,13 @@ public class RoomDAOImpl implements RoomDao{
 
     public void insert(Room room) {
         db = helper.getWritableDatabase();
-        String sql = "insert into room values(null,?,?,?,?,?,?)";
+        String sql = "insert into room values(null,?,?,?,?,?)";
         db.execSQL(sql, new Object[]{
                 room.getRoomName(),
                 room.getExpectNumber(),
                 room.getRealNumber(),
-                room.getCost()});
+                room.getCost(),
+                room.getRemark()});
         db.close();
     }
 
@@ -74,6 +75,7 @@ public class RoomDAOImpl implements RoomDao{
                 room.setExpectNumber(cursor.getInt(cursor.getColumnIndex("expect_number")));
                 room.setRealNumber(cursor.getInt(cursor.getColumnIndex("real_number")));
                 room.setCost(cursor.getInt(cursor.getColumnIndex("cost")));
+                room.setRemark(cursor.getString(cursor.getColumnIndex("remark")));
 
                 rooms.add(room);
             }
@@ -105,6 +107,7 @@ public class RoomDAOImpl implements RoomDao{
                 room.setExpectNumber(cursor.getInt(cursor.getColumnIndex("expect_number")));
                 room.setRealNumber(cursor.getInt(cursor.getColumnIndex("real_number")));
                 room.setCost(cursor.getInt(cursor.getColumnIndex("cost")));
+                room.setRemark(cursor.getString(cursor.getColumnIndex("remark")));
             }
             // 4. 关闭cursor
             cursor.close();
@@ -116,7 +119,7 @@ public class RoomDAOImpl implements RoomDao{
 
     @Override
     public List<Room> selectByCost(int cost) {
-        String sql = "select * from t_room where expect_number > real_number";
+        String sql = "select * from room where expect_number > real_number";
         List<Room> rooms = null;
 
         // 1. 获取SQLiteDatabase对象
@@ -135,6 +138,7 @@ public class RoomDAOImpl implements RoomDao{
                 room.setExpectNumber(cursor.getInt(cursor.getColumnIndex("expect_number")));
                 room.setRealNumber(cursor.getInt(cursor.getColumnIndex("real_number")));
                 room.setCost(cursor.getInt(cursor.getColumnIndex("cost")));
+                room.setRemark(cursor.getString(cursor.getColumnIndex("remark")));
 
                 rooms.add(room);
             }

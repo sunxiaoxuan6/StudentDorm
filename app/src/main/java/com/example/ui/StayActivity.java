@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class StayActivity extends AppCompatActivity {
-    private Button entering,allocation,exchange,examine,inquiry2,back,add;
+    private Button entering,allocation,exchange,examine,inquiry2,back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,6 @@ public class StayActivity extends AppCompatActivity {
         examine=findViewById(R.id.examine);
         inquiry2=findViewById(R.id.inquiry2);
         back=findViewById(R.id.back);
-        add=findViewById(R.id.add);
 //录入信息
         entering.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,13 +55,6 @@ public class StayActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(StayActivity.this,ADDRoomActivity.class);
-                startActivity(intent);
-            }
-        });
         //查询
         inquiry2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,7 +63,7 @@ public class StayActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        //返回上衣界面
+        //返回上一界面
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

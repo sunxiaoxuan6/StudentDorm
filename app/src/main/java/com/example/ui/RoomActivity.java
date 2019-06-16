@@ -24,6 +24,7 @@ import java.util.List;
 public class RoomActivity extends AppCompatActivity {
     private static final int ADD_REQUEST = 100;
     private static final int MODIFY_REQUEST = 101;
+
     private ListView roomList;
     private RoomAdapter roomAdapter;
 
@@ -37,11 +38,11 @@ public class RoomActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room);
 
+        initData();
+
         roomList = findViewById(R.id.list_room);
         roomAdapter = new RoomAdapter(rooms);
         roomList.setAdapter(roomAdapter);
-
-        initData();
 
         roomList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -98,6 +99,7 @@ public class RoomActivity extends AppCompatActivity {
         }
     }
 
+    // 接收ADDRoomActivity的返回的添加或修改后的room对象，更新rooms，刷新列表
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -120,19 +122,20 @@ public class RoomActivity extends AppCompatActivity {
             roomAdapter.notifyDataSetChanged();
         }
     }
-//创建添加功能的选项菜单
+    // 创建添加功能的选项菜单
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        //动态加载菜单
-        MenuItem item=menu.add(Menu.FIRST,1,Menu.NONE,"添加");
+        // 动态加载菜单
+        MenuItem item = menu.add(Menu.FIRST, 1, Menu.NONE, "添加");
         item.setIcon(android.R.drawable.ic_menu_add);
         item.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
         return true;
     }
-//处理选项菜单的添加功能
+
+    // 处理选项菜单的添加功能
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case Menu.FIRST:
                 // 跳转到RoomActivity页面进行添加，flag用于存储是添加还是修改
                 Intent intent = new Intent(RoomActivity.this, ADDRoomActivity.class);

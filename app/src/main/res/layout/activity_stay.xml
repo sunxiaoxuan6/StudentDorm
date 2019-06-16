@@ -38,12 +38,6 @@
         android:text="毕业退宿审核"
         android:textSize="20sp"/>
     <Button
-        android:id="@+id/add"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="增加宿舍信息"
-        android:textSize="20sp"/>
-    <Button
         android:id="@+id/inquiry2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

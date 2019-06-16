@@ -24,7 +24,7 @@ public class RoomAdapter extends BaseAdapter {
     }
 
     @Override
-    public Object getItem(int position) {
+    public Room getItem(int position) {
         return rooms.get(position);
     }
 
@@ -36,31 +36,33 @@ public class RoomAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
-        if(convertView==null){
-            convertView= LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_room,parent,false);
-            holder=new ViewHolder();
+        if(convertView == null) {
+            convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_room, parent, false);
+            holder = new ViewHolder();
 
-            holder.tvName=convertView.findViewById(R.id.room_name);
-            holder.tvExpectNumber=convertView.findViewById(R.id.room_expect);
-            holder.tvRealNumber=convertView.findViewById(R.id.room_real);
-            holder.tvCost=convertView.findViewById(R.id.room_cost);
+            holder.tvName = convertView.findViewById(R.id.room_name);
+            holder.tvExpectNumber = convertView.findViewById(R.id.room_expect);
+            holder.tvRealNumber = convertView.findViewById(R.id.room_real);
+            holder.tvCost = convertView.findViewById(R.id.room_cost);
 
             convertView.setTag(holder);
-        }else {
-            holder=(ViewHolder) convertView.getTag();
+        } else {
+            holder = (ViewHolder) convertView.getTag();
         }
 
-        Room room=rooms.get(position);
+        Room room = rooms.get(position);
         holder.tvName.setText(room.getRoomName());
-        holder.tvExpectNumber.setText(room.getExpectNumber());
-        holder.tvRealNumber.setText(room.getRealNumber());
-        holder.tvCost.setText(room.getCost());
+        holder.tvExpectNumber.setText(String.valueOf(room.getExpectNumber()));
+        holder.tvRealNumber.setText(String.valueOf(room.getRealNumber()));
+        holder.tvCost.setText(String.valueOf(room.getCost()));
+
         return convertView;
     }
-    static class ViewHolder{
+    static class ViewHolder {
         TextView tvName;
         TextView tvExpectNumber;
         TextView tvRealNumber;
         TextView tvCost;
+
     }
 }

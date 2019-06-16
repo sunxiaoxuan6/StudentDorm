@@ -2,25 +2,22 @@ package com.example.ui;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 
 import com.example.model.Room;
 import com.example.service.RoomService;
 import com.example.service.RoomServiceImpl;
 
-import java.util.Arrays;
-import java.util.List;
-
 public class ADDRoomActivity extends AppCompatActivity implements View.OnClickListener {
     private Button btnSave, btnCancel;
     private EditText etRoomName, etRealNumber;
     private EditText etExpectNumber, etCost;
+    private EditText etRemark;
+
 
     private Room room;
     private RoomService roomService;
@@ -37,6 +34,20 @@ public class ADDRoomActivity extends AppCompatActivity implements View.OnClickLi
         initData();
     }
 
+    private void initView() {
+        etRoomName = findViewById(R.id.et_room_name);
+        etExpectNumber = findViewById(R.id.et_expect_number);
+        etRealNumber = findViewById(R.id.et_real_number);
+        etCost = findViewById(R.id.sp_room_cost);
+        etRemark = findViewById(R.id.et_remark);
+
+        btnSave = findViewById(R.id.btn_save1);
+        btnCancel = findViewById(R.id.btn_cancel1);
+        btnSave.setOnClickListener(this);
+        btnCancel.setOnClickListener(this);
+
+    }
+
     private void initData() {
         Intent intent = getIntent();
         flag = intent.getStringExtra("flag");
@@ -50,30 +61,19 @@ public class ADDRoomActivity extends AppCompatActivity implements View.OnClickLi
                 etRealNumber.setText(String.valueOf(room.getRealNumber()));
                 etExpectNumber.setText(String.valueOf(room.getExpectNumber()));
                 etCost.setText(String.valueOf(room.getCost()));
+                etRemark.setText(room.getRemark());
                }
         }
     }
 
-    private void initView() {
-        etRoomName = findViewById(R.id.et_room_name);
-        etExpectNumber = findViewById(R.id.et_expect_number);
-        etRealNumber = findViewById(R.id.et_real_number);
-        etCost = findViewById(R.id.sp_room_cost);
-
-        btnSave = findViewById(R.id.btn_save);
-        btnCancel = findViewById(R.id.btn_cancel);
-        btnSave.setOnClickListener(this);
-        btnCancel.setOnClickListener(this);
-
-    }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btn_save:
+            case R.id.btn_save1:
                 updateRoom();
                 break;
-            case R.id.btn_cancel:
+            case R.id.btn_cancel1:
                 finish();
         }
     }
@@ -86,6 +86,7 @@ public class ADDRoomActivity extends AppCompatActivity implements View.OnClickLi
         room.setRealNumber(Integer.valueOf(etRealNumber.getText().toString()));
         room.setExpectNumber(Integer.parseInt(etExpectNumber.getText().toString()));
         room.setCost(Integer.parseInt(etCost.getText().toString()));
+        room.setRemark(etRemark.getText().toString());
 
         if("修改".equals(flag)) {
             roomService.modifyRealNumber(room);
