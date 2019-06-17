@@ -18,7 +18,7 @@ public class RoomDAOImpl implements RoomDao{
         //调用MyDBHelper类的构造方法时，
         //若发现demo.db不存在会调用onCreate创建
         //若发现demo.db存在，且version的版本与已有的不一致，则调用onUpgrade方法更新
-        helper=new MyDBHelper(context,1);
+        helper=new MyDBHelper(context);
     }
 
 
