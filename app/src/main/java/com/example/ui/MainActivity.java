@@ -48,9 +48,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (rb_houseparent.isChecked()) {
+                    //宿管界面
                     Intent intent = new Intent(MainActivity.this, DormActivity.class);
                     startActivity(intent);
                 } else if (rb_student.isChecked()) {
+                    //学生界面
                     Intent intent = new Intent(MainActivity.this, StudentActivity.class);
                     startActivity(intent);
                 }

@@ -2,4 +2,11 @@
     <string name="app_name">宿舍管理系统</string>
     <string name="student">学生管理界面</string>
     <string name="dorm">宿舍管理员界面</string>
+
+    <string-array name="sex">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+
+    <string name="sex_prompt">请选择性别</string>
 </resources>
