@@ -1,12 +1,12 @@
 package com.example.ui;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.model.Register;
 import com.example.service.RegisterService;
@@ -63,24 +63,19 @@ public class RegisterActivity extends AppCompatActivity {
                     register = new Register();
                 }
                 register.setName(name.getText().toString());
-                register.setStudentId(Integer.valueOf(id.getText().toString()));
-                register.setPassword(Integer.parseInt(password.getText().toString()));
-                register.setSecondPassword(Integer.parseInt(secondPassword.getText().toString()));
-                if(password==secondPassword) {
-                    if ("修改".equals(flag)) {
-                        registerService.modifyRealNumber(register);
-                    } else if ("添加".equals(flag)) {
-                        registerService.insert(register);
-                    }
+                register.setStudentId(id.getText().toString());
+                register.setPassword(password.getText().toString());
+                register.setSecondPassword(secondPassword.getText().toString());
+                if(register.getPassword().equals(register.getSecondPassword())) {
+                    registerService.insert(register);
+                    Intent intent=new Intent(RegisterActivity.this,MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Toast.makeText(RegisterActivity.this,"两次密码不一致",Toast.LENGTH_SHORT).show();
                 }
 
-                // 将修改的数据返回MainActivity
-                Intent intent = new Intent();
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("register", register);
-                intent.putExtras(bundle);
-                setResult(Activity.RESULT_OK, intent);
-                finish();
+
             }
         });
     }

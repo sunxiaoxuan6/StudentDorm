@@ -41,9 +41,9 @@ public class RegisterDAOImpl implements RegisterDao {
                 Register register = new Register();
                 register.setId(cursor.getInt(cursor.getColumnIndex("id")));
                 register.setName(cursor.getString(cursor.getColumnIndex("name")));
-                register.setStudentId(cursor.getInt(cursor.getColumnIndex("student_id")));
-                register.setPassword(cursor.getInt(cursor.getColumnIndex("password")));
-                register.setSecondPassword(cursor.getInt(cursor.getColumnIndex("second_password")));
+                register.setStudentId(cursor.getString(cursor.getColumnIndex("student_id")));
+                register.setPassword(cursor.getString(cursor.getColumnIndex("password")));
+                register.setSecondPassword(cursor.getString(cursor.getColumnIndex("second_password")));
 
                 registers.add(register);
             }
@@ -72,9 +72,9 @@ public class RegisterDAOImpl implements RegisterDao {
                 register = new Register();
                 register.setId(cursor.getInt(cursor.getColumnIndex("id")));
                 register.setName(cursor.getString(cursor.getColumnIndex("name")));
-                register.setStudentId(cursor.getInt(cursor.getColumnIndex("student_id")));
-                register.setPassword(cursor.getInt(cursor.getColumnIndex("password")));
-                register.setSecondPassword(cursor.getInt(cursor.getColumnIndex("second_password")));
+                register.setStudentId(cursor.getString(cursor.getColumnIndex("student_id")));
+                register.setPassword(cursor.getString(cursor.getColumnIndex("password")));
+                register.setSecondPassword(cursor.getString(cursor.getColumnIndex("second_password")));
             }
             // 4. 关闭cursor
             cursor.close();
@@ -102,9 +102,9 @@ public class RegisterDAOImpl implements RegisterDao {
                 Register register = new Register();
                 register.setId(cursor.getInt(cursor.getColumnIndex("id")));
                 register.setName(cursor.getString(cursor.getColumnIndex("name")));
-                register.setStudentId(cursor.getInt(cursor.getColumnIndex("student_id")));
-                register.setPassword(cursor.getInt(cursor.getColumnIndex("password")));
-                register.setSecondPassword(cursor.getInt(cursor.getColumnIndex("second_password")));
+                register.setStudentId(cursor.getString(cursor.getColumnIndex("student_id")));
+                register.setPassword(cursor.getString(cursor.getColumnIndex("password")));
+                register.setSecondPassword(cursor.getString(cursor.getColumnIndex("second_password")));
 
                 registers.add(register);
             }

@@ -6,20 +6,20 @@ public class Register implements Serializable {
     public static final String TBL_Register = "create table if not exists register(" +
             "id integer primary key autoincrement," +
             "name varchar(20)," +
-            "student_id integer," +
-            "password integer," +
-            "second_password integer)";
+            "student_id varchar(20)," +
+            "password varchar(20)," +
+            "second_password varchar(20))";
 
     private int id;
     private String name;
-    private int studentId;
-    private int password;
-    private int secondPassword;
+    private String studentId;
+    private String password;
+    private String secondPassword;
 
     public Register(){
 
     }
-    public Register(String name, int studentId, int password, int secondPassword) {
+    public Register(String name, String studentId, String password, String secondPassword) {
         this.name = name;
         this.studentId = studentId;
         this.password = password;
@@ -42,27 +42,27 @@ public class Register implements Serializable {
         this.name = name;
     }
 
-    public int getStudentId() {
+    public String getStudentId() {
         return studentId;
     }
 
-    public void setStudentId(int studentId) {
+    public void setStudentId(String studentId) {
         this.studentId = studentId;
     }
 
-    public int getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(int password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 
-    public int getSecondPassword() {
+    public String getSecondPassword() {
         return secondPassword;
     }
 
-    public void setSecondPassword(int secondPassword) {
+    public void setSecondPassword(String secondPassword) {
         this.secondPassword = secondPassword;
     }
 
@@ -70,9 +70,9 @@ public class Register implements Serializable {
     public String toString() {
         return "Register{" +
                 "name='" + name + '\'' +
-                ", studentId=" + studentId +
-                ", password=" + password +
-                ", secondPassword=" + secondPassword +
+                ", studentId='" + studentId + '\'' +
+                ", password='" + password + '\'' +
+                ", secondPassword='" + secondPassword + '\'' +
                 '}';
     }
 }
