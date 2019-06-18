@@ -20,17 +20,17 @@ public class Supervisor implements Serializable {
     private int build_number;
     private int job_hour;
     private String contact;
-    private String remark;
 
-    public Supervisor(String name,int job_number,String sex,
-                      int build_number,int job_hour,String contact,String remark){
+    public Supervisor(){
+    }
+
+    public Supervisor(String name, int job_number, String sex, int build_number, int job_hour, String contact) {
         this.name = name;
         this.job_number = job_number;
         this.sex = sex;
         this.build_number = build_number;
         this.job_hour = job_hour;
         this.contact = contact;
-        this.remark = remark;
     }
 
     public static String getTblSupervisor() {
@@ -93,13 +93,6 @@ public class Supervisor implements Serializable {
         this.contact = contact;
     }
 
-    public String getRemark() {
-        return remark;
-    }
-
-    public void setRemark(String remark) {
-        this.remark = remark;
-    }
 
     @Override
     public String toString() {
@@ -111,7 +104,6 @@ public class Supervisor implements Serializable {
                 ", build_number=" + build_number +
                 ", job_hour=" + job_hour +
                 ", contact='" + contact + '\'' +
-                ", remark='" + remark + '\'' +
                 '}';
     }
 }
