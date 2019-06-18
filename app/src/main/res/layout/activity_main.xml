@@ -114,5 +114,12 @@
             android:layout_weight="1"
             android:textSize="20sp"
             android:text="修改密码"/>
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="注册"/>
     </LinearLayout>
 </LinearLayout>

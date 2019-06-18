@@ -13,7 +13,7 @@ public class SupervisorDAOImpl implements SupervisorDAO {
     private SQLiteOpenHelper db;
 
     public SupervisorDAOImpl(Context context){
-        helper = new MyDBHelper(context,1);
+        helper = new MyDBHelper(context);
     }
     @Override
     public List<Supervisor> selectAllSupervisors() {
