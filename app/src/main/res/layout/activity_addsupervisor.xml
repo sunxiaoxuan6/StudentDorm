@@ -13,7 +13,6 @@
         android:textSize="35dp"
         android:layout_gravity="center"/>
     <LinearLayout
-        android:padding="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -30,7 +29,6 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
     <LinearLayout
-        android:padding="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -46,7 +44,6 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
     <LinearLayout
-        android:padding="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -65,12 +62,10 @@
             android:spinnerMode="dialog"/>
     </LinearLayout>
     <LinearLayout
-        android:padding="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="管理楼层:"
@@ -81,12 +76,10 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
     <LinearLayout
-        android:padding="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="工作时间:"
@@ -97,7 +90,6 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
     <LinearLayout
-        android:padding="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -111,7 +103,61 @@
             android:id="@+id/et_contact"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="办公房间:"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/et_room"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="工作周期:"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/et_period"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="备     注："
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/et_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="16"
+            android:hint="备注信息"
+            android:inputType="textMultiLine"
+            android:minLines="2" />
+    </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

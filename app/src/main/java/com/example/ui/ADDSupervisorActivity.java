@@ -10,10 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import com.example.model.Student;
 import com.example.model.Supervisor;
-import com.example.service.StudentService;
-import com.example.service.StudentServiceImpl;
 import com.example.service.SupervisorService;
 import com.example.service.SupervisorServiceImpl;
 
@@ -53,11 +50,11 @@ public class ADDSupervisorActivity extends AppCompatActivity implements View.OnC
             if(supervisor != null) {
                 et_name.setText(supervisor.getName());
                 et_name.setEnabled(false);
-                et_job_number.setText(String.valueOf(supervisor.getJob_number()));
-                et_job_hour.setText(String.valueOf(supervisor.getJob_hour()));
-                et_build_number.setText(String.valueOf(supervisor.getBuild_number()));
-                et_contact.setText(String.valueOf(supervisor.getContact()));
                 spSupervisorSex.setSelection(sexes.indexOf(supervisor.getSex()), true);
+                et_job_number.setText(String.valueOf(supervisor.getJob_number()));
+                et_build_number.setText(String.valueOf(supervisor.getBuild_number()));
+                et_job_hour.setText(String.valueOf(supervisor.getJob_hour()));
+                et_contact.setText(String.valueOf(supervisor.getContact()));
             }
         }
 
@@ -66,8 +63,8 @@ public class ADDSupervisorActivity extends AppCompatActivity implements View.OnC
     private void initView() {
         et_name = findViewById(R.id.et_name);
         spSupervisorSex = findViewById(R.id.sp_supervisor_sex);
-        et_build_number = findViewById(R.id.et_build_number);
         et_job_number = findViewById(R.id.et_job_number);
+        et_build_number = findViewById(R.id.et_build_number);
         et_job_hour = findViewById(R.id.et_job_hour);
         et_contact = findViewById(R.id.et_contact);
         btn_save100 = findViewById(R.id.btn_save100);
@@ -99,10 +96,10 @@ public class ADDSupervisorActivity extends AppCompatActivity implements View.OnC
         }
         //获取将界面上修改的数据写入对象
         supervisor.setName(et_name.getText().toString());
-        supervisor.setJob_number(Integer.valueOf(et_job_number.getText().toString()));
-        supervisor.setJob_hour(Integer.parseInt(et_job_hour.getText().toString()));
-        supervisor.setBuild_number(Integer.parseInt(et_build_number.getText().toString()));
         supervisor.setSex((String) spSupervisorSex.getSelectedItem());
+        supervisor.setJob_number(Integer.valueOf(et_job_number.getText().toString()));
+        supervisor.setBuild_number(Integer.parseInt(et_build_number.getText().toString()));
+        supervisor.setJob_hour(Integer.parseInt(et_job_hour.getText().toString()));
         supervisor.setContact(et_contact.getText().toString());
         //根据flag进行修改或添加到数据库表
         if("修改".equals(flag)) {
@@ -111,7 +108,6 @@ public class ADDSupervisorActivity extends AppCompatActivity implements View.OnC
             supervisorService.insert(supervisor);
         }
 
-        // 将修改的数据返回MessageActivity
         Intent intent = new Intent();
         Bundle bundle = new Bundle();
         bundle.putSerializable("supervisor", supervisor);

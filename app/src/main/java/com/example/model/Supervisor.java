@@ -11,7 +11,9 @@ public class Supervisor implements Serializable {
             "build_number int," +
             "job_hour integer,"+
             "contact varchar(20)," +
-            "remark varchar(200))";
+            "remark varchar(20)," +
+            "room integer," +
+            "period integer";
 
     private int id;
     private String name;
@@ -20,21 +22,24 @@ public class Supervisor implements Serializable {
     private int build_number;
     private int job_hour;
     private String contact;
+    private String remark;
+    private int room;
+    private int period;
 
     public Supervisor(){
+
     }
 
-    public Supervisor(String name, int job_number, String sex, int build_number, int job_hour, String contact) {
+    public Supervisor(String name, int job_number, String sex, int build_number, int job_hour, String contact, String remark, int room, int period) {
         this.name = name;
         this.job_number = job_number;
         this.sex = sex;
         this.build_number = build_number;
         this.job_hour = job_hour;
         this.contact = contact;
-    }
-
-    public static String getTblSupervisor() {
-        return TBL_SUPERVISOR;
+        this.remark = remark;
+        this.room = room;
+        this.period = period;
     }
 
     public int getId() {
@@ -93,17 +98,42 @@ public class Supervisor implements Serializable {
         this.contact = contact;
     }
 
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
+
+    public int getRoom() {
+        return room;
+    }
+
+    public void setRoom(int room) {
+        this.room = room;
+    }
+
+    public int getPeriod() {
+        return period;
+    }
+
+    public void setPeriod(int period) {
+        this.period = period;
+    }
 
     @Override
     public String toString() {
         return "Supervisor{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
                 ", job_number=" + job_number +
                 ", sex='" + sex + '\'' +
                 ", build_number=" + build_number +
                 ", job_hour=" + job_hour +
                 ", contact='" + contact + '\'' +
+                ", remark='" + remark + '\'' +
+                ", room=" + room +
+                ", period=" + period +
                 '}';
     }
 }

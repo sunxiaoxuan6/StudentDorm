@@ -3,9 +3,7 @@ package com.example.dao;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.model.Student;
 import com.example.model.Supervisor;
 import com.example.util.MyDBHelper;
 
@@ -22,7 +20,9 @@ public class SupervisorDAOImpl implements SupervisorDAO {
     @Override
     public List<Supervisor> selectAllSupervisors() {
         String sql = "select * from supervisor";
+
         List<Supervisor> supervisors = null;
+
         db = helper.getReadableDatabase();
         Cursor cursor = db.rawQuery(sql, null);
         if (cursor != null && cursor.getCount() > 0) {
@@ -37,6 +37,9 @@ public class SupervisorDAOImpl implements SupervisorDAO {
                 supervisor.setBuild_number(cursor.getInt(cursor.getColumnIndex("build_number")));
                 supervisor.setJob_hour(cursor.getInt(cursor.getColumnIndex("job_hour")));
                 supervisor.setContact(cursor.getString(cursor.getColumnIndex("contact")));
+                supervisor.setRemark(cursor.getString(cursor.getColumnIndex("remark")));
+                supervisor.setRoom(cursor.getInt(cursor.getColumnIndex("room")));
+                supervisor.setPeriod(cursor.getInt(cursor.getColumnIndex("period")));
                 supervisors.add(supervisor);
             }
             cursor.close();
@@ -67,6 +70,9 @@ public class SupervisorDAOImpl implements SupervisorDAO {
                 supervisors.setBuild_number(cursor.getInt(cursor.getColumnIndex("build_number")));
                 supervisors.setJob_hour(cursor.getInt(cursor.getColumnIndex("job_hour")));
                 supervisors.setContact(cursor.getString(cursor.getColumnIndex("contact")));
+                supervisors.setRemark(cursor.getString(cursor.getColumnIndex("remark")));
+                supervisors.setRoom(cursor.getInt(cursor.getColumnIndex("room")));
+                supervisors.setPeriod(cursor.getInt(cursor.getColumnIndex("period")));
             }
             cursor.close();
         }
@@ -77,10 +83,12 @@ public class SupervisorDAOImpl implements SupervisorDAO {
 
     @Override
     public List<Supervisor> selectByCost(int cost) {
-        String sql = "select * from supervisor where educational > 4";
+        String sql = "select * from supervisor where educational > 6";
         List<Supervisor> supervisors = null;
         db = helper.getReadableDatabase();
+
         Cursor cursor = db.rawQuery(sql, null);
+
         if (cursor != null && cursor.getCount() > 0){
             supervisors = new ArrayList<>();
             while (cursor.moveToNext()){
@@ -93,6 +101,9 @@ public class SupervisorDAOImpl implements SupervisorDAO {
                 supervisor.setBuild_number(cursor.getInt(cursor.getColumnIndex("build_number")));
                 supervisor.setJob_hour(cursor.getInt(cursor.getColumnIndex("job_hour")));
                 supervisor.setContact(cursor.getString(cursor.getColumnIndex("contact")));
+                supervisor.setRemark(cursor.getString(cursor.getColumnIndex("remark")));
+                supervisor.setRoom(cursor.getInt(cursor.getColumnIndex("room")));
+                supervisor.setPeriod(cursor.getInt(cursor.getColumnIndex("period")));
                 supervisors.add(supervisor);
             }
             cursor.close();
@@ -105,14 +116,17 @@ public class SupervisorDAOImpl implements SupervisorDAO {
     @Override
     public void insert(Supervisor supervisor) {
         db = helper.getWritableDatabase();
-        String sql = "insert into student values(null,?,?,?,?,?,?)";
+        String sql = "insert into student values(null,?,?,?,?,?,?,?,?,?)";
         db.execSQL(sql, new Object[]{
                 supervisor.getName(),
                 supervisor.getJob_number(),
                 supervisor.getSex(),
                 supervisor.getBuild_number(),
                 supervisor.getJob_hour(),
-                supervisor.getContact(),});
+                supervisor.getContact(),
+                supervisor.getRemark(),
+                supervisor.getRoom(),
+                supervisor.getPeriod()});
                 db.close();
     }
 

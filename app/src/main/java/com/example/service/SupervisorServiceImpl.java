@@ -2,13 +2,10 @@ package com.example.service;
 
 import android.content.Context;
 
-import com.example.dao.StudentDAOImpl;
-import com.example.dao.StudentDao;
 import com.example.dao.SupervisorDAO;
 import com.example.dao.SupervisorDAOImpl;
 import com.example.model.Supervisor;
 
-import java.io.Serializable;
 import java.util.List;
 
 public class SupervisorServiceImpl implements SupervisorService{

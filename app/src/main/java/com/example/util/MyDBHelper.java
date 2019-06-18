@@ -12,7 +12,7 @@ import com.example.model.Supervisor;
 public class MyDBHelper extends SQLiteOpenHelper {
 
     public MyDBHelper(Context context) {
-        super(context, "dorm.db", null, 8);
+        super(context, "dorm.db", null, 9);
     }
 
     // 当app发现没有dorm.db时会自动调用onCreate创建数据库表

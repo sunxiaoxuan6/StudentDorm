@@ -28,7 +28,7 @@ import java.util.List;
 
 public class SupervisorActivity extends AppCompatActivity {
     private static final int ADD_REQUEST = 100;
-    private static final int MODIFY_REQUEST = 101;
+    private static final int MODIFY_REQUEST = 102;
 
     private ListView supervisorList;
     private SupervisorAdapter supervisorAdapter;
@@ -109,7 +109,7 @@ public class SupervisorActivity extends AppCompatActivity {
             if(bundle==null){
                 return;
             }
-            //更新student列表
+
             selectedSupervisor= (Supervisor) bundle.get("supervisor");
             if(requestCode==MODIFY_REQUEST){
                 supervisors.set(selectedPos,selectedSupervisor);

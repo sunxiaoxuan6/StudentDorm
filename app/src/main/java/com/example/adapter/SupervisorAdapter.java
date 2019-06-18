@@ -45,10 +45,27 @@ public class SupervisorAdapter extends BaseAdapter {
             holder.lvBuild_number = convertView.findViewById(R.id.m_build_number);
             holder.lvJob_hour = convertView.findViewById(R.id.m_job_hour);
             holder.lvContact = convertView.findViewById(R.id.m_contact);
+            holder.lvRoom = convertView.findViewById(R.id.m_room);
+            holder.lvPeriod = convertView.findViewById(R.id.m_period);
+            holder.lvRemark = convertView.findViewById(R.id.m_remark);
+
 
             convertView.setTag(holder);
+        }else{
+            holder = (ViewHolder) convertView.getTag();
         }
-        return null;
+        Supervisor supervisor = Supervisors.get(position);
+        holder.lvName.setText(supervisor.getName());
+        holder.lvJob_number.setText(String.valueOf(supervisor.getJob_number()));
+        holder.lvSex.setText(String.valueOf(supervisor.getSex()));
+        holder.lvBuild_number.setText(String.valueOf(supervisor.getBuild_number()));
+        holder.lvJob_hour.setText(String.valueOf(supervisor.getJob_hour()));
+        holder.lvContact.setText(String.valueOf(supervisor.getContact()));
+        holder.lvRoom.setText(String.valueOf(supervisor.getContact()));
+        holder.lvPeriod.setText(String.valueOf(supervisor.getContact()));
+        holder.lvRemark.setText(String.valueOf(supervisor.getContact()));
+
+        return convertView;
     }
 
     static class ViewHolder {
@@ -58,5 +75,8 @@ public class SupervisorAdapter extends BaseAdapter {
         TextView lvBuild_number;
         TextView lvJob_hour;
         TextView lvContact;
+        TextView lvRoom;
+        TextView lvPeriod;
+        TextView lvRemark;
     }
 }
