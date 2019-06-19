@@ -13,7 +13,7 @@ public class Supervisor implements Serializable {
             "contact varchar(20)," +
             "remark varchar(20)," +
             "room integer," +
-            "period integer";
+            "period integer)";
 
     private int id;
     private String name;
