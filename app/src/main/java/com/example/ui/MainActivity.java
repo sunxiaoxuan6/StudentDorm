@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String username=et_username.getText().toString();
-                String password=et_password.getText().toString();
+                String password=et_password. getText().toString();
 
                 if(username.isEmpty()||password.isEmpty()){
                     Toast.makeText(MainActivity.this,"用户名或密码不能为空",Toast.LENGTH_SHORT).show();
