@@ -6,14 +6,14 @@ public class Supervisor implements Serializable {
     public static final String TBL_SUPERVISOR = "create table if not exists supervisor("+
             "id integer primary key autoincrement," +
             "name varchar(20)," +
-            "job_number int," +
+            "job_number integer," +
             "sex varchar(20)," +
-            "build_number int," +
+            "build_number integer," +
             "job_hour integer,"+
             "contact varchar(20)," +
             "remark varchar(20)," +
             "room integer," +
-            "period integer";
+            "period integer)";
 
     private int id;
     private String name;

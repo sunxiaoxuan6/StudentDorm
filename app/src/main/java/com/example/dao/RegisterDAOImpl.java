@@ -5,7 +5,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.model.Register;
-import com.example.model.Room;
 import com.example.util.MyDBHelper;
 
 import java.util.ArrayList;
@@ -133,10 +132,10 @@ public class RegisterDAOImpl implements RegisterDao {
         // 1. 获取db对象
         db = helper.getWritableDatabase();
         // 2. 执行sql
-        String sql = "update register set name=? where student_id=?";
+        String sql = "update register set name=? where password=?";
         db.execSQL(sql, new Object[]{
                 register.getName(),
-                register.getStudentId()
+                register.getSecondPassword()
         });
     }
 

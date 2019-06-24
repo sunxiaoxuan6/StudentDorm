@@ -85,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
                 register.setPassword(password);
 
                 boolean tem=registerService.login(register);
+
                 if(tem)
                 {
                 if (rb_houseparent.isChecked()) {

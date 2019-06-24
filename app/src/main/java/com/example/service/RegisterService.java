@@ -13,5 +13,6 @@ public interface RegisterService {
 
     boolean login(Register register);
     boolean repeat(Register register);
+    boolean register(Register register);
 
 }

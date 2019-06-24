@@ -7,7 +7,6 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.model.Register;
-import com.example.model.Room;
 import com.example.ui.R;
 
 import java.util.List;

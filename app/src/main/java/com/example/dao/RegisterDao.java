@@ -1,7 +1,6 @@
 package com.example.dao;
 
 import com.example.model.Register;
-import com.example.model.Room;
 
 import java.util.List;
 
@@ -12,8 +11,10 @@ public interface RegisterDao {
     Register select(String studentId);
 
     List<Register> selectByCost(int cost);
-    //增删改一个用户
+    //增加用户
     void insert(Register register);
+    //修改
     void update(Register register);
+    //删除
     void delete(String Name);
 }

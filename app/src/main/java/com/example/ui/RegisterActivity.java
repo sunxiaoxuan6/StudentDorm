@@ -75,7 +75,16 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(RegisterActivity.this,"两次密码不一致",Toast.LENGTH_SHORT).show();
                 }
 
+                Register register = new Register();
+                register.setName(name.getText().toString());
 
+                boolean repeat=registerService.repeat(register);
+
+                if(repeat){
+                    Toast.makeText(RegisterActivity.this,"注册成功",Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(RegisterActivity.this,"该用户已存在,请重新注册",Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
