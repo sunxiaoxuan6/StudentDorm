@@ -40,6 +40,10 @@ public class MessageActivity extends AppCompatActivity  {
 
         initData();
 
+        init();
+    }
+
+    private void init() {
         studentList = findViewById(R.id.list_rooms);
         studentAdapter = new StudentAdapter(students);
         studentList.setAdapter(studentAdapter);
@@ -60,6 +64,7 @@ public class MessageActivity extends AppCompatActivity  {
                 startActivityForResult(intent, MODIFY_REQUEST);
             }
         });
+
         studentList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent,

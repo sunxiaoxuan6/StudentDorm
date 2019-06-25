@@ -26,7 +26,6 @@ public class ADDStudentActivity extends AppCompatActivity implements View.OnClic
     private EditText etStartTime,etContact;
     private Spinner spStudentSex;
 
-
     private List<String> sexes;
     private Student student;
     private StudentService studentService;
@@ -40,6 +39,7 @@ public class ADDStudentActivity extends AppCompatActivity implements View.OnClic
         studentService=new StudentServiceImpl(this);
 
         initView();
+
         initData();
     }
 

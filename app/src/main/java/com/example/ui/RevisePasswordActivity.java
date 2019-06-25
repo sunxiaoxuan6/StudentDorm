@@ -13,7 +13,7 @@ import com.example.service.RegisterService;
 import com.example.service.RegisterServiceImpl;
 
 public class RevisePasswordActivity extends AppCompatActivity {
-    private Register register;
+    Register register=new Register();
     private RegisterService registerService;
 
     private Button exit;
@@ -23,29 +23,12 @@ public class RevisePasswordActivity extends AppCompatActivity {
     private EditText etNewPassword;
     private EditText etConfirmPassword;
 
-    private String flag;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_revise_password);
 
         init();
-        registerService = new RegisterServiceImpl(this);
-
-        initData();
-    }
-
-    private void initData() {
-        Intent intent = getIntent();
-        flag = intent.getStringExtra("flag");
-        Bundle bundle = intent.getExtras();
-        if(bundle != null) {
-            register = (Register) bundle.getSerializable("register");
-            if(register != null) {
-                etNewPassword.setText(String.valueOf(register.getPassword()));
-                etConfirmPassword.setText(String.valueOf(register.getSecondPassword()));
-            }
-        }
     }
 
     private void init() {
@@ -55,21 +38,31 @@ public class RevisePasswordActivity extends AppCompatActivity {
         etConfirmPassword=findViewById(R.id.et_confirm_password);
 
         exit = findViewById(R.id.exit);
+
+        registerService = new RegisterServiceImpl(this);
+        Intent intent=getIntent();
+        Bundle bundle=intent.getExtras();
+        if(bundle!=null){
+            register.setName(bundle.getString("register"));
+        }
+
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    register.setPassword(etNewPassword.getText().toString());
-                    register.setSecondPassword(etConfirmPassword.getText().toString());
-                    if (etUserName.equals(flag)) {
-                    if (register.getPassword().equals(register.getSecondPassword())&&etPassWord!=etNewPassword) {
-                        registerService.modifyRealNumber(register);
-                        Intent intent = new Intent(RevisePasswordActivity.this, MainActivity.class);
-                        startActivity(intent);
-                        finish();
-                    } else {
-                        Toast.makeText(RevisePasswordActivity.this, "两次密码不一致", Toast.LENGTH_SHORT).show();
+                String name=etUserName.getText().toString();
+                String password=etPassWord.getText().toString();
+                String newPassword=etNewPassword.getText().toString();
+                String confirmPassword=etConfirmPassword.getText().toString();
+                    if (confirmPassword.equals(newPassword)) {
+                        register.setPassword(password);
+
+                        boolean result=registerService.update(register,newPassword);
+                        if(result){
+                            Toast.makeText(RevisePasswordActivity.this,"密码修改成功",Toast.LENGTH_LONG).show();
+                        }
+                }else {
+                        Toast.makeText(RevisePasswordActivity.this,"两次密码不一致",Toast.LENGTH_LONG).show();
                     }
-                }
             }
         });
     }
