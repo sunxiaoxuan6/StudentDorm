@@ -47,7 +47,7 @@ public class StudentActivity extends AppCompatActivity{
         enter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(StudentActivity.this, MessageActivity.class);
+                Intent intent = new Intent(StudentActivity.this, ADDStudentActivity.class);
                 startActivity(intent);
             }
         });
@@ -63,7 +63,7 @@ public class StudentActivity extends AppCompatActivity{
         revise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(StudentActivity.this, MessageActivity.class);
+                Intent intent = new Intent(StudentActivity.this, ADDStudentActivity.class);
                 startActivity(intent);
             }
         });

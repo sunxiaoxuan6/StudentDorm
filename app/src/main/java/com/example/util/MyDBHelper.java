@@ -4,7 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.model.Out;
+import com.example.model.Entering;
 import com.example.model.Register;
 import com.example.model.Room;
 import com.example.model.Student;
@@ -23,7 +23,7 @@ public class MyDBHelper extends SQLiteOpenHelper {
         db.execSQL(Student.TBL_Student);
         db.execSQL(Register.TBL_Register);
         db.execSQL(Supervisor.TBL_SUPERVISOR);
-        db.execSQL(Out.TBL_Out);
+        db.execSQL(Entering.TBL_Entering);
     }
 
     // 当app发现有dorm.db时，而且version有变化时会自动调用onUpgrade更新数据库表
@@ -33,7 +33,7 @@ public class MyDBHelper extends SQLiteOpenHelper {
         db.execSQL("drop table if exists student");
         db.execSQL("drop table if exists register");
         db.execSQL("drop table if exists supervisor");
-        db.execSQL("drop table if exists out");
+        db.execSQL("drop table if exists entering");
         onCreate(db);
     }
 }

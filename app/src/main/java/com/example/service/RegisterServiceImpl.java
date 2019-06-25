@@ -29,6 +29,8 @@ public class RegisterServiceImpl implements RegisterService {
         registerDao.update(register);
     }
 
+
+
     @Override
     public void delete(String Name) {
         registerDao.delete(Name);
@@ -59,13 +61,12 @@ public class RegisterServiceImpl implements RegisterService {
     }
 
     @Override
-    public boolean register(Register register) {
-        //        1.获取用户信息
-        Register user = registerDao.select(register.getPassword());
-        if(user!=null&&!user.getPassword().equals(register.getPassword())){
-            return true;
+    public boolean update(Register register, String newPassword) {
+        Register register1=registerDao.select(register.getName());
+
+        if(register1!=null&&register1.getPassword().equals(register.getPassword())){
+            registerDao.updatePwd(register.getName(),newPassword);
         }
         return false;
     }
-
 }

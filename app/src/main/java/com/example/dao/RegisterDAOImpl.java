@@ -135,15 +135,23 @@ public class RegisterDAOImpl implements RegisterDao {
         String sql = "update register set name=? where password=?";
         db.execSQL(sql, new Object[]{
                 register.getName(),
-                register.getSecondPassword()
+                register.getStudentId()
         });
     }
 
     @Override
     public void delete(String Name) {
         // 1. 获取db对象
-        db = helper.getWritableDatabase();        // 2. 执行sql
+        db = helper.getWritableDatabase();
+        // 2. 执行sql
         String sql = "delete from register where name=?";
         db.execSQL(sql, new Object[]{ Name });
+    }
+
+    @Override
+    public void updatePwd(String userName, String password) {
+        db=helper.getWritableDatabase();
+        String sql="update register set name=? where password=?";
+        db.execSQL(sql,new Object[]{userName,password});
     }
 }

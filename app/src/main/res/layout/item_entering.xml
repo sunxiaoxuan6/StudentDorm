@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/sushehao"
+        android:gravity="center"
+        android:text="宿舍名"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/renshu"
+        android:gravity="center"
+        android:text="人数"
+        android:textSize="24sp"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/peoplename"
+        android:gravity="center"
+        android:text="人员姓名"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/occupied"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="已占床位"
+        android:textSize="24sp" />
+
+</LinearLayout>

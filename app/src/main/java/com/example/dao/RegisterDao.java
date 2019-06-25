@@ -17,4 +17,7 @@ public interface RegisterDao {
     void update(Register register);
     //删除
     void delete(String Name);
+
+    void updatePwd(String userName,String password);
+
 }
