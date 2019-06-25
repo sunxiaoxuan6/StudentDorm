@@ -6,21 +6,31 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context="com.example.ui.OutActivity">
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="退宿申请界面"
-    android:textSize="35dp"
-    android:layout_gravity="center"/>
+
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="退宿申请界面"
+        android:textSize="35dp"
+        android:layout_gravity="center"/>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="退宿理由:"
-        android:textSize="20sp"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="请输入文字"/>
+        android:orientation="horizontal">
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="申请人:"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/et_out_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入名字"/>
+    </LinearLayout>
+
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -54,36 +64,55 @@
             android:textSize="25dp" />
     </RadioGroup>
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="离校请假时间:"
-        android:textSize="20sp"
-        android:layout_marginTop="50dp"/>
-    <TextView
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="离校时间:"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/et_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入时间"/>
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="返校时间:"
-        android:textSize="20sp" />
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-    <Button
-        android:id="@+id/submit"
-        android:layout_width="0dp"
-        android:layout_weight="1"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返校时间:"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/et_back_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入时间"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:text="提交"
-        android:layout_marginTop="20dp"/>
-    <Button
-        android:id="@+id/return2"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:text="保存并退出"
-        android:layout_marginTop="20dp"/>
-</LinearLayout>
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="提交"
+            android:layout_marginTop="20dp"/>
+        <Button
+            android:id="@+id/return2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="保存并退出"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
 </LinearLayout>
