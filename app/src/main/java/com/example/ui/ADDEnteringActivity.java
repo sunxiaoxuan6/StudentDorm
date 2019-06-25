@@ -39,7 +39,7 @@ public class ADDEnteringActivity extends AppCompatActivity implements View.OnCli
 
         Bundle bundle = intent.getExtras();
         if(bundle != null) {
-            entering = (Entering) bundle.getSerializable("room");
+            entering = (Entering) bundle.getSerializable("entering");
             if(entering != null) {
                 etSuSheHao.setText(entering.getName());
                 etSuSheHao.setEnabled(false);
