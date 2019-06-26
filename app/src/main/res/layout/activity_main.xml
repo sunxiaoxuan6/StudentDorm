@@ -46,13 +46,14 @@
             android:layout_height="wrap_content"
             android:textSize="30sp"
             android:text="密    码：" />
+
         <EditText
             android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="默认密码，身份证后六位"
             android:inputType="textPassword"
-            android:textSize="20sp"
-            android:hint="默认密码，身份证后六位"/>
+            android:textSize="20sp" />
     </LinearLayout>
     </LinearLayout>
 
