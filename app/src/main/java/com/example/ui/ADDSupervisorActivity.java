@@ -52,6 +52,7 @@ public class ADDSupervisorActivity extends AppCompatActivity implements View.OnC
                 et_name.setEnabled(false);
                 spSupervisorSex.setSelection(sexes.indexOf(supervisor.getSex()), true);
                 et_job_number.setText(String.valueOf(supervisor.getJob_number()));
+                et_job_number.setEnabled(false);
                 et_build_number.setText(String.valueOf(supervisor.getBuild_number()));
                 et_job_hour.setText(String.valueOf(supervisor.getJob_hour()));
                 et_contact.setText(String.valueOf(supervisor.getContact()));

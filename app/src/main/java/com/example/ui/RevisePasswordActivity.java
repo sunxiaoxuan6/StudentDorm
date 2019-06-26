@@ -23,6 +23,9 @@ public class RevisePasswordActivity extends AppCompatActivity {
     private EditText etNewPassword;
     private EditText etConfirmPassword;
 
+
+    private String flag;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,8 +43,11 @@ public class RevisePasswordActivity extends AppCompatActivity {
         exit = findViewById(R.id.exit);
 
         registerService = new RegisterServiceImpl(this);
+
         Intent intent=getIntent();
-        Bundle bundle=intent.getExtras();
+        flag = intent.getStringExtra("flag");
+
+        Bundle bundle = intent.getExtras();
         if(bundle!=null){
             register.setName(bundle.getString("register"));
         }
@@ -54,6 +60,7 @@ public class RevisePasswordActivity extends AppCompatActivity {
                 String newPassword=etNewPassword.getText().toString();
                 String confirmPassword=etConfirmPassword.getText().toString();
                     if (confirmPassword.equals(newPassword)) {
+
                         register.setPassword(password);
 
                         boolean result=registerService.update(register,newPassword);

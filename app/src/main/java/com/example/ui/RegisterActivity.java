@@ -66,8 +66,11 @@ public class RegisterActivity extends AppCompatActivity {
                 register.setStudentId(id.getText().toString());
                 register.setPassword(password.getText().toString());
                 register.setSecondPassword(secondPassword.getText().toString());
+
                 if(register.getPassword().equals(register.getSecondPassword())) {
+
                     registerService.insert(register);
+
                     Intent intent=new Intent(RegisterActivity.this,MainActivity.class);
                     startActivity(intent);
                     finish();
@@ -78,9 +81,9 @@ public class RegisterActivity extends AppCompatActivity {
                 Register register = new Register();
                 register.setName(name.getText().toString());
 
-                boolean repeat=registerService.repeat(register);
+                boolean repeat=registerService.login(register);
 
-                if(repeat){
+                if(!repeat){
                     Toast.makeText(RegisterActivity.this,"注册成功",Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(RegisterActivity.this,"该用户已存在,请重新注册",Toast.LENGTH_SHORT).show();

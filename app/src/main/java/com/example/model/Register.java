@@ -8,7 +8,8 @@ public class Register implements Serializable {
             "name varchar(20)," +
             "student_id varchar(20)," +
             "password varchar(20)," +
-            "second_password varchar(20))";
+            "second_password varchar(20)" +
+            ")";
 
     private int id;
     private String name;

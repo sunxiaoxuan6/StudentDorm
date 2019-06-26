@@ -62,10 +62,11 @@ public class RegisterServiceImpl implements RegisterService {
 
     @Override
     public boolean update(Register register, String newPassword) {
+
         Register register1=registerDao.select(register.getName());
 
         if(register1!=null&&register1.getPassword().equals(register.getPassword())){
-            registerDao.updatePwd(register.getName(),newPassword);
+            registerDao.updatePassword(register.getName(),newPassword);
         }
         return false;
     }

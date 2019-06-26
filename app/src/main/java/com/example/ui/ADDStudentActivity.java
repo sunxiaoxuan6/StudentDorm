@@ -77,7 +77,9 @@ public class ADDStudentActivity extends AppCompatActivity implements View.OnClic
                 etName.setText(student.getName());
                 etName.setEnabled(false);
                 etId.setText(String.valueOf(student.getStudent_id()));
+                etId.setEnabled(false);
                 etDormId.setText(String.valueOf(student.getDorm_id()));
+                etDormId.setEnabled(false);
                 etFaculty.setText(String.valueOf(student.getFaculty()));
                 etClass.setText(String.valueOf(student.getClass1()));
                 etEducational.setText(String.valueOf(student.getEducational()));

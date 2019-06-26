@@ -135,7 +135,7 @@ public class RegisterDAOImpl implements RegisterDao {
         String sql = "update register set name=? where password=?";
         db.execSQL(sql, new Object[]{
                 register.getName(),
-                register.getStudentId()
+                register.getPassword()
         });
     }
 
@@ -149,9 +149,10 @@ public class RegisterDAOImpl implements RegisterDao {
     }
 
     @Override
-    public void updatePwd(String userName, String password) {
+    public void updatePassword(String userName, String password) {
         db=helper.getWritableDatabase();
         String sql="update register set name=? where password=?";
         db.execSQL(sql,new Object[]{userName,password});
     }
+
 }

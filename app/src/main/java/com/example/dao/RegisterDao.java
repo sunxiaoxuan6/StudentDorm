@@ -18,6 +18,6 @@ public interface RegisterDao {
     //删除
     void delete(String Name);
 
-    void updatePwd(String userName,String password);
+    void updatePassword(String userName,String password);
 
 }
